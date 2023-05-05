@@ -8,8 +8,8 @@ Reference : https://github.com/aws/aws-iot-device-sdk-python-v2
 
 # Testing status
 
-| Publisher | Subscriber | Status |
-| --- | --- | --- |
-| MQTTV5 | MQTTV5 | [![Generic badge](https://img.shields.io/badge/TESTING-PASS-GREEN.svg)]() |
-| MQTTV3 | MQTTV3 | [![Generic badge](https://img.shields.io/badge/TESTING-PASS-GREEN.svg)]() |
-| MQTTV5 | MQTTV3 | [![Generic badge](https://img.shields.io/badge/TESTING-FAILED-red.svg)]() |
+| Publisher | Subscriber | Status | Files |
+| --- | --- | --- | --- |
+| MQTTV5 | MQTTV5 | [![Generic badge](https://img.shields.io/badge/TESTING-PASS-GREEN.svg)]() | **Publisher** : pub_mqtt5.py **Subscribers** : sub1_mqtt5.py and sub2_mqtt5.py |
+| MQTTV3 | MQTTV3 | [![Generic badge](https://img.shields.io/badge/TESTING-PENDING-yellow.svg)]() |  |
+| MQTTV5 | MQTTV3 | [![Generic badge](https://img.shields.io/badge/TESTING-FAILED-red.svg)]() | **Publisher** : pub_mqtt5.py **Subscribers** : sub1_mqtt3.py |
