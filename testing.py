@@ -5,17 +5,9 @@ import threading
 import time
 import json
 
-from awscrt import io
-
-io.init_logging(io.LogLevel.Info, 'stderr')
-
 # Callback when the subscribed topic receives a message
 def on_message_received(topic, payload, dup, qos, retain, **kwargs):
-    print("Received message from topic for shared topic '{}': {}".format(topic, payload))
-
-
-def on_message_callback(topic, payload, dup, qos, retain, **kwargs):
-    print("Received message from on_message_callback '{}': {}".format(topic, payload))
+    print("Received message from topic '{}': {}".format(topic, payload))
 
 
 mqtt_connection = mqtt_connection_builder.mtls_from_path(
@@ -24,11 +16,9 @@ mqtt_connection = mqtt_connection_builder.mtls_from_path(
         cert_filepath="./certs/subs/sub1/sub1-certificate.pem.crt",
         pri_key_filepath="./certs/subs/sub1/sub1-private.pem.key",
         ca_filepath="./certs/subs/sub1/AmazonRootCA1.pem",
-        client_id="mqtt3_subclient1",
+        client_id="testingclient",
         clean_session=False,
         keep_alive_secs=30)
-
-mqtt_connection.on_message(on_message_callback)
 
 connect_future = mqtt_connection.connect()
 

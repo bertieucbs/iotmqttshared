@@ -9,6 +9,12 @@ import time
 import json
 from random import seed
 from random import randint
+import logging
+from awscrt import io
+
+#io.init_logging(io.LogLevel.Trace, 'stdout')
+
+
 
 TIMEOUT = 100
 future_connection_success = Future()
@@ -53,7 +59,7 @@ client = mqtt5_client_builder.mtls_from_path(
         on_lifecycle_stopped=on_lifecycle_stopped,
         on_lifecycle_connection_success=on_lifecycle_connection_success,
         on_lifecycle_connection_failure=on_lifecycle_connection_failure,
-        client_id="testingclient")
+        client_id="mqtt5_publisherclient")
 print("MQTT5 Client Created")
 
 client.start()
