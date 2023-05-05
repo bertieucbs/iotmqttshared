@@ -6,6 +6,8 @@ Reference : https://github.com/aws/aws-iot-device-sdk-python-v2
 
 <img src="images/mqttv5_sharedtopic.png"  width="70%" height="40%">
 
+**Note** : Tested on awscrt-0.16.17 and awsiotsdk-1.14.1
+
 # Testing status
 
 | Publisher | Subscriber | Status | Files |
