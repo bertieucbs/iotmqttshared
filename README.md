@@ -3,6 +3,7 @@
 **Note** : Using AWS IoT Device SDK v2 for Python
 
 Reference : https://github.com/aws/aws-iot-device-sdk-python-v2
+Note : The fix for MQTT311 shared subscriptions has been bubbled up, merged, and released! Version 1.14.1 includes the fix and should be consumable via pip now.
 
 <img src="images/mqttv5_sharedtopic.png"  width="70%" height="40%">
 
